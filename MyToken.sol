@@ -12,7 +12,7 @@ contract MyToken is ERC20, Ownable {
         _mint(msg.sender, 1000000000 * 10 ** decimals());
     }
     
-    // function to allow admin to transfer *any* BEP20 tokens from this contract..
+    // function to allow admin to transfer *any* ERC20 tokens from this contract..
     function transferAnyERC20Tokens(address tokenAddress, address recipient, uint256 amount) public onlyOwner {
         require(amount > 0, "$EARN: amount must be greater than 0");
         require(recipient != address(0), "$EARN: recipient is the zero address");
